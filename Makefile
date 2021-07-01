@@ -14,11 +14,11 @@ OUT = ./out
 SRC = ./src
 INC = ./src/include
 
-OBJ = Main.o TreeNode.o
+OBJ = Main.o KeyValue.o
 
 NAME = programme.out
 
-FILE_PATHS = $(SRC)/Main.cpp $(SRC)/TreeNode.cpp
+FILE_PATHS = $(SRC)/Main.cpp $(SRC)/KeyValue.cpp
 
 # Build commands
 

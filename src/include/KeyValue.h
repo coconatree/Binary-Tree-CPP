@@ -1,16 +1,16 @@
 #ifndef KEY_VALUE_H
-#deifne KEY_VALUE_H
-
-class KeyValue
-{
+#define KEY_VALUE_H
 
 typedef int  KeyType;
 typedef int DataType;
 
+class KeyValue
+{
+
 public:
 
     KeyValue();
-    KeyValue();
+    KeyValue(KeyType key, DataType data);
 
     ~KeyValue();
 
@@ -19,6 +19,8 @@ public:
 
     void setKey(KeyType key);
     void setData(DataType data);
+
+    bool validate(const KeyType& key);
 
 private:
 

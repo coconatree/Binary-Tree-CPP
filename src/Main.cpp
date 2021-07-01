@@ -10,7 +10,7 @@
 
 #include<iostream>
 
-#include "include/BinarySearchTree.h"
+#include "include/KeyValue.h"
 
 void heightAnalysis()
 {
@@ -25,5 +25,11 @@ int main()
 {
     std::cout << "HELLO WORLD !!!" << std::endl;
 
+    KeyValue obj(10, 20);
+
+    std::cout << "Key : " << obj.getKey() << " Data : " << obj.getData() << std::endl;
+
+    std::cout << "Validated : " << obj.validate(10) << std::endl; 
+ 
     return 0;
 }
