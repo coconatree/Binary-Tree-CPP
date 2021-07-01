@@ -34,3 +34,8 @@ bool KeyValue::validate(const KeyType& key)
 {
     return this->_key == key;
 }
+
+std::ostream& operator << (std::ostream& out, KeyValue& obj)
+{
+    return out << "{ Key : " << obj.getData() << ", Data: " << obj.getKey() << std::endl; 
+}

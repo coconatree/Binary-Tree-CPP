@@ -4,6 +4,8 @@
 typedef int  KeyType;
 typedef int DataType;
 
+#include <iostream>
+
 class KeyValue
 {
 
@@ -28,6 +30,9 @@ private:
 
     KeyType   _key;
     DataType _data;
+
+friend std::ostream& operator << (std::ostream& out, KeyValue& obj);
+
 };
 
 #endif
