@@ -7,34 +7,39 @@ BinaryNode::BinaryNode(){}
 
 // Constructor
 
-BinaryNode::BinaryNode(const ItemType& nodeItem, NodePtr left = nullptr, NodePtr right = nullptr)
+BinaryNode::BinaryNode(const ItemType& nodeItem, NodePtr l, NodePtr r)
 {
     this->_data = nodeItem;
 
-    this->_lChild = left;
-    this->_rChild = right;
+    this->_lChild = l;
+    this->_rChild = r;
 }
 
 BinaryNode::~BinaryNode(){}
 
-ItemType BinaryNode::getData()
-{
-    return this->_data;
-}
-
-NodePtr BinaryNode::getLeft()
+BinaryNode::NodePtr BinaryNode::getLeft()
 {
     return this->_lChild;
 }
 
-NodePtr BinaryNode::getRight()
+BinaryNode::NodePtr BinaryNode::getRight()
 {
     return this->_rChild;
 }
 
+void BinaryNode::setLeft(NodePtr l)
+{
+    this->_lChild = l;
+}
+
+void BinaryNode::setRight(NodePtr r)
+{
+    this->_rChild = r;
+}   
+
 // Used for testing purposes
 
-std::ostream operator << (std::ostream& out, BinaryNode& node)
+std::ostream& operator << (std::ostream& out, BinaryNode& obj)
 {
-    return out << "Data : " << node.getData() << " Left : " << obj.getLeft() << " Right : " << obj.getRight() << std::endl;
+    return out << "{ Data : "  << obj._data << " }" << std::endl;
 }

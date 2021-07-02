@@ -14,15 +14,20 @@
 #ifndef TREE_NODE_H
 #define TREE_NODE_H
 
-#include "include/KeyValue.h"
+// For nullptr
+
+#include <cstddef>
+
+#include "KeyValue.h"
 
 // Declaring types for later use
 
 typedef KeyValue ItemType;
-typedef BinaryNode* NodePtr;
 
 class BinaryNode
 {
+
+typedef BinaryNode* NodePtr;
 
 // Everything in this class is private because it will be only used by the binary search tree 
 // class and nothing else
@@ -30,19 +35,23 @@ class BinaryNode
 public:
 
     BinaryNode();
-    BinaryNode(const ItemType& nodeItem, NodePtr left = nullptr, NodePtr right = nullptr);
+    BinaryNode(const ItemType& data, NodePtr l = nullptr, NodePtr r = nullptr);
 
     ~BinaryNode();
+
+    NodePtr getLeft();
+    NodePtr getRight();
+
+    void setLeft(NodePtr);
+    void setRight(NodePtr);
+
+private:
 
     ItemType _data;
     NodePtr  _lChild;
     NodePtr  _rChild;
 
-    ItemType getData();
-    NodePtr getLeft();
-    NodePtr getRight();
-
-friend std::ostream operator << (std::ostream& out, BinaryNode& node);
+friend std::ostream& operator << (std::ostream& out, BinaryNode& obj);
 
 // Friending the binary serach class for giving it acces to the class
 

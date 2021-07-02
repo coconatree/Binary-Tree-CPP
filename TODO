@@ -3,8 +3,8 @@ TODO:
     [x] Key value pair for seraching and future use.
     [x] Key value pair testing.
 
-    [ ] Creating the binary node class.
-    [ ] Testing the binary node class.
+    [x] Creating the binary node class.
+    [x] Testing the binary node class.
 
     [ ] Creating the binary search tree class.
     [ ] Testing the binary search tree class.
@@ -13,7 +13,7 @@ TODO:
 
 FIXME:
 
-    [ ]
+    [ ] BinarySearchTree.h default costructor should initialize the _lChild and _rChild values to nullptr.
     [ ]
     [ ]
     [ ]

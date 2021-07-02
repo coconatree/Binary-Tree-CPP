@@ -9,11 +9,17 @@ class TreeException : public std::exception
 
 public:
 
-    TreeException(const std::string& msg = "");
+    virtual const char* what() const throw();
+
+    TreeException(const std::string& message = "");
     
     ~TreeException() throw();
     
-    virtual const char* what() const throw();
+
+private:
+
+    std::string msg;
+
 };
 
 #endif

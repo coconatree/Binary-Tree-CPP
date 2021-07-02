@@ -1,10 +1,11 @@
 #include "include/BinarySearchTree.h"
 
-BinarySearchTree::BinarySearchTree() : _root(nullptr){}
+BinarySearchTree::BinarySearchTree() : _root(nullptr) // , _lChild(nullptr), _rChild(nullptr)
+{}
 
 BinarySearchTree::BinarySearchTree(const ItemType& rootItem)
 {
-    this->_root = new BinaryNode(rootItem, nullptr, nullptr); 
+    this->_root = new BinaryNode(rootItem); 
 }
 
 BinarySearchTree::~BinarySearchTree()

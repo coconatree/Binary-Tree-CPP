@@ -29,18 +29,17 @@ public:
 
     // Class Methods
 
-    bool insert(const ItemType key);
-    
-    // Naming for this fuction should be delete.
-    
-    bool remove(const ItemType key);
+    bool insertItem(const ItemType key);
+        
+    bool deleteItem(const ItemType key);
 
-    NodePtr retrive(const ItemType key);
+    BinaryNode::NodePtr retriveItem(const KeyType key);
 
-    void inorderTraverse(ItemType*& arr, int& lenght);
+    void inorderTraverse(ItemType*& array, int& lenght);
     
     int getHeight();
-    int numNodesDeeper(int level);
+    int numHeightBalance();
+    int numNodesDeeer(int level);
 
 private:
 
