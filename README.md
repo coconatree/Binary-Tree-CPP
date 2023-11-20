@@ -1,2 +1,3 @@
-# CS_202_Homework_02
-CS 202 Homework 02
+# Binary Tree C++
+
+A school project that implements a binary tree structure in c++
